@@ -7,9 +7,11 @@
 * timezones.admin
 # Commands
 [] = optional & () = required
+
 **Chat/Console commands**
 * timezone set (Zone ID) (day/night)
 * timezone disable (Zone ID)
 * timezone toggle [player]
+
 **Chat only Commands**
 * nightvision [player]
