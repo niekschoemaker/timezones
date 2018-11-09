@@ -12,14 +12,14 @@ using Debug = UnityEngine.Debug;
 
 namespace Oxide.Plugins
 {
-    [Info("TimeZones", "Misstake", "0.2.0")]
+    [Info("Time Zones", "Misstake", "0.2.1")]
     [Description("Sets time of day depending on the zone you're in (with ZoneManager)")]
 
     public class TimeZones : RustPlugin
     {
         [PluginReference]
         Plugin ZoneManager;
-        public static string PermissionName = "timezones.allowed";
+        public static string PermissionName = "timezones.admin";
 
         public Timer Timer { get; set; }
 
@@ -272,7 +272,7 @@ namespace Oxide.Plugins
         [ChatCommand("timezone")]
         void TimeZoneCommand(BasePlayer player, string command, string[] args)
         {
-            if (!permission.UserHasPermission(player.UserIDString, "timezones.admin"))
+            if (!permission.UserHasPermission(player.UserIDString, PermissionName))
             {
                 return;
             }
