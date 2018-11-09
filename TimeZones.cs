@@ -534,12 +534,10 @@ namespace Oxide.Plugins
             //Check if a subscription to the CanNetworkTo hook is still necessary
             if (PData.Count == 0)
             {
-                PrintToConsole(RustCore.FindPlayer("76561198029082205"), "Hook unsubscribed");
                 Unsubscribe(nameof(CanNetworkTo));
             }
             else
             {
-                PrintToConsole(RustCore.FindPlayer("76561198029082205"), "Hook subscribed");
                 Subscribe(nameof(CanNetworkTo));
             }
         }
