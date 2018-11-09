@@ -12,7 +12,7 @@ using Debug = UnityEngine.Debug;
 
 namespace Oxide.Plugins
 {
-    [Info("Time Zones", "Misstake", "0.2.1")]
+    [Info("Time Zones", "Misstake", "0.2.2")]
     [Description("Sets time of day depending on the zone you're in (with ZoneManager)")]
 
     public class TimeZones : RustPlugin
