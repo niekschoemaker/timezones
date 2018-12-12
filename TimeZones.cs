@@ -12,7 +12,7 @@ using Oxide.Game.Rust.Libraries.Covalence;
 
 namespace Oxide.Plugins
 {
-    [Info("Time Zones", "Misstake", "0.4.0")]
+    [Info("Time Zones", "Misstake", "0.4.1")]
     [Description("Sets time of day depending on the zone you're in (with ZoneManager)")]
 
     public class TimeZones : CovalencePlugin
@@ -29,7 +29,7 @@ namespace Oxide.Plugins
             public bool TimeZoneDisabled { get; set; }
         }
 
-        public static PlayerData GetPlayerData(string Id)
+        public PlayerData GetPlayerData(string Id)
         {
             PlayerData data;
             if (!PData.TryGetValue(Id, out data))
@@ -40,7 +40,7 @@ namespace Oxide.Plugins
             return data;
         }
 
-        private static Dictionary<string, PlayerData> PData { get; set; } = new Dictionary<string, PlayerData>();
+        private Dictionary<string, PlayerData> PData { get; set; } = new Dictionary<string, PlayerData>();
 
         #endregion
 
